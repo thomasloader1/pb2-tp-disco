@@ -2,9 +2,9 @@ package ar.edu.unlam.pb2.disco;
 
 public class Disco {
 
-	Double circuloMayor;
-	Double circuloMenor;
-	Double perimetroMenor, perimetroMayor, radioExterior, radioInterior, superficie;
+	private Double circuloMayor;
+	private Double circuloMenor;
+	private Double perimetroMenor, perimetroMayor, radioExterior, radioInterior, superficie;
 
 	public Disco(Double circuloMayor, Double circuloMenor) {
 		this.circuloMayor = circuloMayor;
@@ -32,7 +32,7 @@ public class Disco {
 	}
 
 	public Double superficie() {
-		superficie = perimetroMayor + perimetroMenor;
+		superficie = this.perimetroExterior() + this.perimetroInterior();
 		return superficie;
 	}
 
